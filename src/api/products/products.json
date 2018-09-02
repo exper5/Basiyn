@@ -1,0 +1,63 @@
+[
+    {
+        "productId": 1,
+        "productName": "SD 20180822 Save Single Variant",
+        "sellerName": "GDN-0011",
+        "productimage": "assets/1.jpg",
+        "l3category": "Leaf rake with 48-inch wooden handle.",
+        "MRP": "₹ 100",
+        "Cost": "₹ 30",
+        "DaystoFulfill":"1",
+        "variant1":"Size (4)",
+        "Variant2": "Weight (4)"
+    },
+    {
+        "productId": 2,
+        "productName": "SD 20180822 Save Two Variant P1",
+        "sellerName": "TU001",
+        "productimage": "assets/2.jpg",
+        "l3category": "Portable Projectors",
+        "MRP": "₹ 200",
+        "Cost": "₹ 190",
+        "DaystoFulfill":"1",
+        "variant1":"Size (4)",
+        "Variant2": "Weight (4)"
+    },
+    {
+        "productId": 3,
+        "productName": "SD 20180822 Save Two Variant P2",
+        "sellerName": "TU001",
+        "productimage": "assets/3.jpg",
+        "l3category": "Portable Projectors",
+        "MRP": "₹ 200",
+        "Cost": "₹ 190",
+        "DaystoFulfill":"1",
+        "variant1":"Size (4)",
+        "Variant2": "Weight (4)"
+    },
+    {
+        "productId": 4,
+        "productName": "SD 20180822 Save Two Variant P3",
+        "sellerName": "TU001",
+        "productimage": "assets/4.jpg",
+        "l3category": "Portable Projectors",
+        "MRP": "₹ 200",
+        "Cost": "₹ 190",
+        "DaystoFulfill":"1",
+        "variant1":"Size (4)",
+        "Variant2": "Weight (4)"
+    },
+    {
+        "productId": 5,
+        "productName": "SD 20180822 Save Two Variant P4",
+        "sellerName": "TU001",
+        "productimage": "assets/5.jpg",
+        "l3category": "Portable Projectors",
+        "MRP": "₹ 200",
+        "Cost": "₹ 190",
+        "DaystoFulfill":"1",
+        "variant1":"Size (4)",
+        "Variant2": "Weight (4)"
+    }
+    
+]

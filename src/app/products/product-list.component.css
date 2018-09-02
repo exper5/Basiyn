@@ -1,0 +1,16 @@
+thead {
+    color: #337AB7;
+}
+.proimg {
+    width: 50px;
+}
+.container.prolist {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.table th{
+    text-align: center;
+}
+.table td{
+    text-align: center;
+}

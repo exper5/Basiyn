@@ -1,0 +1,639 @@
+<!-- <div class="container detail">
+<div class='panel panel-primary' *ngIf='product'>
+    <div class='panel-heading'>
+        {{pageTitle + ': ' + product.productName}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Name:</div>
+                    <div class='col-md-6'>{{product.productName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Code:</div>
+                    <div class='col-md-6'>{{product.productCode | lowercase | convertToSpaces: '-'}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Description:</div>
+                    <div class='col-md-6'>{{product.description}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Availability:</div>
+                    <div class='col-md-6'>{{product.releaseDate}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Price:</div>
+                    <div class='col-md-6'>{{product.price|currency:'USD':true}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>5 Star Rating:</div>
+                    <div class='col-md-6'>
+                        <pm-star [rating]='product.starRating'>
+                        </pm-star>
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' 
+                     [style.width.px]='200' 
+                     [style.margin.px]='2' 
+                     [src]='product.imageUrl'
+                     [title]='product.productName'>
+            </div>
+        </div>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>
+</div> -->
+<div class="container" *ngIf="product">
+        <div class='panel-heading'>
+                {{pageTitle + ': ' + product.productName}}
+            </div>
+<div class="col-md-12 top">
+<div class="col-md-4"><p>Master Product Name: </p></div>
+<div class="col-md-8"><input type="text" class="proname1" value="{{product.productName}}"></div>
+</div>
+<div class="col-md-12 top">
+        <div class="col-md-3 first">
+                <p>My Category</p>
+                <select  name="category_level10" id="category_level10"  class="form-control category-level10">
+                        <option value="volvo">Mycategory</option>
+                        <option value="saab">Powered Spice</option>
+                        <option value="mercedes">My cat 2 Delete</option>
+          
+                      </select>
+            </div>
+            <div class="col-md-3 second">
+                    <p>Level1 Category</p>
+                    <select name="category_level10" id="category_level10"  class="form-control category-level10">
+                        <option value="">Select Category</option>
+                        <option value="101">Beauty &amp; Personal Care</option>
+                        <option value="102">Electronics</option>
+                        <option value="103">Food &amp; Beverage</option>
+                        <option value="104">Foodgrains, Oil, &amp; Masala</option>
+                        <option value="105">Fruits &amp; Vegetables</option>
+                        <option value="106">Gifts, Books, Stationery, and More</option>
+                        <option value="107">Health &amp; Medicines</option>
+                        <option value="108">Home Essentials</option>
+                        <option value="109">Home Improvement</option>
+                        <option value="110">Hunger Corner</option>
+                        <option value="111">Kids Fashion, Toys, &amp; Baby Products</option>
+                        <option value="112">Mens Fashion</option>
+                        <option value="113">Sweets and Snacks</option>
+                        <option value="114">TV and Appliances</option>
+                        <option value="115">Womens Fashion</option>
+                    </select>
+                </div>
+                <div class="col-md-3 third">
+                    <p>Level2 Category</p>
+                    <select name="category_level20"  id="category_level20" class="form-control category-level20">
+                        <option value="">Select Category</option>
+                        <option value="1001">Bath, Face, and Hand Wash</option>
+                        <option value="1002">Feminine Hygiene</option>
+                        <option value="1003">First Aid &amp; Basic Health</option>
+                        <option value="1004">Hair Care</option>
+                        <option value="1005">Mens Grooming &amp; Personal Care</option>
+                        <option value="1006">Nail Care &amp; More</option>
+                        <option value="1007">Oral Care</option>
+                        <option value="1008">Skin Care</option>
+                        <option value="1009">Talcum Powder</option>
+                        <option value="1010">Womens Beauty &amp; Grooming</option>
+                    </select>
+                    </div>
+                    <div class="col-md-3 fourth">
+                        <p>Level3 Category</p>
+                        <select name="category_level30" id="category_level30" class="form-control category-level30">
+                            <option value="">Select Category</option>
+                            <option value="10001">Bath &amp; Face Gift Pack</option>
+                            <option value="10002">Bath Accessories</option>
+                            <option value="10003">Bathing Bars &amp; Soaps</option>
+                            <option value="10004">Face Wash, Scrubs, Toners</option>
+                            <option value="10005">Handwash &amp; Sanitizer</option>
+                            <option value="10006">Shower Gel &amp; Body Wash</option>
+                        </select>
+                        </div>
+        </div>
+
+<div class="half" >
+    
+    <div class="tab blue">
+      <input id="tab-four" type="radio" name="tabs2">
+      <label for="tab-four">{{product.productName}} S</label>
+      <div class="tab-content">
+        <!--container content start-->
+        <div class="container">
+        <div class="col-md-12 first">
+            <div class="col-md-4">
+        <p>Product Name </p>
+        </div>
+        <div class="col-md-8">
+            <input type="text" class="proname1" value="{{product.productName}}">
+        </div>
+     
+      </div>
+      </div>
+
+      <div class="container">
+          <div class="col-md-12">
+              <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+              <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+              <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+             
+              </div>
+              <div class="col-md-12 secondrow">
+                  <div class="col-md-3">
+                      <p>Selling Price *
+                            (in INR)</p>
+                            <input type="text" class="proname" value="{{ product.Cost}}">
+                  </div>
+                  <div class="col-md-3">
+                      <p>MRP</p>
+                      <input type="text" class="proname" value="{{ product.MRP}}">
+                  </div>
+                  <div class="col-md-3">
+                      <p>Fullfillment Time*
+                            (Days)</p>
+                            <input type="text" class="proname" value="{{product.DaystoFulfill}}">
+                  </div>
+                  <div class="col-md-3">
+                      <p>Brand</p>
+                        <input type="text" class="proname" value="GG">
+                  </div>
+                  </div>
+
+
+                  <div class="col-md-12 third">
+                        <div class="col-md-4">
+                    <p>Product Description </p>
+                    </div>
+                    <div class="col-md-8">
+                            <textarea rows="3" cols="100">
+                                    Enter Product description
+                                    </textarea>
+                    </div>
+                 
+                  </div>
+
+                  <div class="col-md-12 fourth">
+                      <div class="row">
+                          <div class="col-md-12">
+                      <div class="col-md-3">
+                          <p>Product ID 1
+                          <input type="text" class="proname"></p>
+                      </div>
+                      <div class="col-md-3">
+                            <p>Product ID 2
+                                    <input type="text" class="proname"></p>
+                      </div>
+                      <div class="col-md-3">
+                            <p>Art No.
+                                    <input type="text" class="proname"></p>
+                      </div>
+                      <div class="col-md-3">
+                            <p>Color
+                                    <input type="text" class="proname"></p>
+                      </div>
+                      </div>
+                      </div>
+
+
+                      <div class="row">
+                            <div class="col-md-12">
+                      <div class="col-md-3">
+                            <p>Size
+                            <input type="text" class="proname"></p>
+                        </div>
+                        <div class="col-md-3">
+                              <p>Length
+                                      <input type="text" class="proname"></p>
+                        </div>
+                        <div class="col-md-3">
+                              <p>EAN
+                                      <input type="text" class="proname"></p>
+                        </div>
+                        <div class="col-md-3">
+                              <p>Weight
+                                      <input type="text" class="proname"></p>
+                        </div>
+                        </div>
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col-md-12">
+                        <div class="col-md-3">
+                                <p>Breadth
+                                <input type="text" class="proname"></p>
+                            </div>
+                            <div class="col-md-3">
+                                  <p>Height
+                                          <input type="text" class="proname"></p>
+                            </div>
+                            <div class="col-md-3">
+                                  <p>HSN
+                                          <input type="text" class="proname"></p>
+                            </div>
+                            <div class="col-md-3">
+                                  <p>Pattern
+                                          <input type="text" class="proname"></p>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="col-md-12">
+                            <div class="col-md-3">
+                                    <p>Volume
+                                    <input type="text" class="proname"></p>
+                                </div>
+                                <div class="col-md-3">
+                                      <p>Age Group
+                                              <input type="text" class="proname"></p>
+                                </div>
+                                <div class="col-md-3">
+                                      <p>No Of Pcs
+                                              <input type="text" class="proname"></p>
+                                </div>
+                                <div class="col-md-3">
+                                      
+                                </div>
+                                </div>
+                                </div>
+
+
+                                <div class="row">
+                                        <div class="col-md-12">
+                                <div class="col-md-3">
+                                        <p>Fabric
+                                        <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>Occasion
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                         
+                                    </div>
+                                    <div class="col-md-3">
+                                          
+                                    </div>
+                                    </div>
+                                    </div>
+                      </div>
+
+          </div>
+      </div>
+    </div>
+    <div class="tab blue">
+      <input id="tab-five" type="radio" name="tabs2">
+      <label for="tab-five">{{product.productName}} M</label>
+      <div class="tab-content">
+        
+            <div class="container">
+                    <div class="col-md-12 first">
+                        <div class="col-md-4">
+                    <p>Product Name </p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="proname1" value="{{product.productName}}">
+                    </div>
+                 
+                  </div>
+                  </div>
+            
+                  <div class="container">
+                      <div class="col-md-12">
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                         
+                          </div>
+                          <div class="col-md-12 secondrow">
+                              <div class="col-md-3">
+                                  <p>Selling Price *
+                                        (in INR)</p>
+                                        <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>MRP</p>
+                                  <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>Fullfillment Time*
+                                        (Days)</p>
+                                        <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>Brand</p>
+                                    <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              </div>
+            
+            
+                              <div class="col-md-12 third">
+                                    <div class="col-md-4">
+                                <p>Product Description </p>
+                                </div>
+                                <div class="col-md-8">
+                                        <textarea rows="3" cols="100">
+                                                Enter Product description
+                                                </textarea>
+                                </div>
+                             
+                              </div>
+            
+                              <div class="col-md-12 fourth">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                  <div class="col-md-3">
+                                      <p>Product ID 1
+                                      <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Product ID 2
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Art No.
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Color
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  </div>
+                                  </div>
+            
+            
+                                  <div class="row">
+                                        <div class="col-md-12">
+                                  <div class="col-md-3">
+                                        <p>Size
+                                        <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>Length
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>EAN
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>Weight
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    </div>
+                                    </div>
+            
+            
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                    <div class="col-md-3">
+                                            <p>Breadth
+                                            <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>Height
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>HSN
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>Pattern
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        </div>
+                                        </div>
+            
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                        <div class="col-md-3">
+                                                <p>Volume
+                                                <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  <p>Age Group
+                                                          <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  <p>No Of Pcs
+                                                          <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  
+                                            </div>
+                                            </div>
+                                            </div>
+            
+            
+                                            <div class="row">
+                                                    <div class="col-md-12">
+                                            <div class="col-md-3">
+                                                    <p>Fabric
+                                                    <input type="text" class="proname"></p>
+                                                </div>
+                                                <div class="col-md-3">
+                                                      <p>Occasion
+                                                              <input type="text" class="proname"></p>
+                                                </div>
+                                                <div class="col-md-3">
+                                                     
+                                                </div>
+                                                <div class="col-md-3">
+                                                      
+                                                </div>
+                                                </div>
+                                                </div>
+                                  </div>
+            
+                      </div>
+
+      </div>
+    </div>
+    <div class="tab blue">
+      <input id="tab-six" type="radio" name="tabs2">
+      <label for="tab-six">{{product.productName}} L</label>
+      <div class="tab-content">
+        
+            <div class="container">
+                    <div class="col-md-12 first">
+                        <div class="col-md-4">
+                    <p>Product Name </p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="proname1" value="{{product.productName}}">
+                    </div>
+                 
+                  </div>
+                  </div>
+            
+                  <div class="container">
+                      <div class="col-md-12">
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                          <div class="col-md-4"><input type="file" name="pic" accept="image/*"></div>
+                         
+                          </div>
+                          <div class="col-md-12 secondrow">
+                              <div class="col-md-3">
+                                  <p>Selling Price *
+                                        (in INR)</p>
+                                        <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>MRP</p>
+                                  <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>Fullfillment Time*
+                                        (Days)</p>
+                                        <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              <div class="col-md-3">
+                                  <p>Brand</p>
+                                    <input type="text" class="proname" value="{{product.productName}}">
+                              </div>
+                              </div>
+            
+            
+                              <div class="col-md-12 third">
+                                    <div class="col-md-4">
+                                <p>Product Description </p>
+                                </div>
+                                <div class="col-md-8">
+                                        <textarea rows="3" cols="100">
+                                                Enter Product description
+                                                </textarea>
+                                </div>
+                             
+                              </div>
+            
+                              <div class="col-md-12 fourth">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                  <div class="col-md-3">
+                                      <p>Product ID 1
+                                      <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Product ID 2
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Art No.
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  <div class="col-md-3">
+                                        <p>Color
+                                                <input type="text" class="proname"></p>
+                                  </div>
+                                  </div>
+                                  </div>
+            
+            
+                                  <div class="row">
+                                        <div class="col-md-12">
+                                  <div class="col-md-3">
+                                        <p>Size
+                                        <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>Length
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>EAN
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                          <p>Weight
+                                                  <input type="text" class="proname"></p>
+                                    </div>
+                                    </div>
+                                    </div>
+            
+            
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                    <div class="col-md-3">
+                                            <p>Breadth
+                                            <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>Height
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>HSN
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        <div class="col-md-3">
+                                              <p>Pattern
+                                                      <input type="text" class="proname"></p>
+                                        </div>
+                                        </div>
+                                        </div>
+            
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                        <div class="col-md-3">
+                                                <p>Volume
+                                                <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  <p>Age Group
+                                                          <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  <p>No Of Pcs
+                                                          <input type="text" class="proname"></p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                  
+                                            </div>
+                                            </div>
+                                            </div>
+            
+            
+                                            <div class="row">
+                                                    <div class="col-md-12">
+                                            <div class="col-md-3">
+                                                    <p>Fabric
+                                                    <input type="text" class="proname"></p>
+                                                </div>
+                                                <div class="col-md-3">
+                                                      <p>Occasion
+                                                              <input type="text" class="proname"></p>
+                                                </div>
+                                                <div class="col-md-3">
+                                                     
+                                                </div>
+                                                <div class="col-md-3">
+                                                      
+                                                </div>
+                                                </div>
+                                                </div>
+                                  </div>
+            
+                      </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="backbut">
+  <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+        <i class='glyphicon glyphicon-chevron-left'></i> Back
+    </a>
+    </div>
+</div>
